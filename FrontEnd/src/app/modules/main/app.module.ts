@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../../../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { IdPipePipe } from './pipes/id-pipe.pipe';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     DepositComponent, 
     AccountComponent, 
     TransferComponent, 
-    ForgotPassComponent,
+    ForgotPassComponent, 
+    IdPipePipe,
      ],
 
   imports: [
@@ -43,4 +46,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
   
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+
+  RegisterComponent: any
+}

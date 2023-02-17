@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users/users.service';
 import { IUsers } from '../../interfaces/users.interface';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'sofka-user',
@@ -10,9 +11,16 @@ import { IUsers } from '../../interfaces/users.interface';
 export class UserComponent implements OnInit {
   users: IUsers[];
 
-  constructor(private readonly usersService: UsersService) {
+  constructor(private readonly usersService: UsersService,
+    private readonly authService : AuthService) {
     this.users = new Array<IUsers>();
   }
+
+  logOut():void {
+    this.authService.SignOut();  
+  }
+
+
   ngOnInit(): void {
    this.usersService.getAll().subscribe({
     next: data =>{

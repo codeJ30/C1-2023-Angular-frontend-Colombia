@@ -10,8 +10,10 @@ export class TransferService {
      
   }
 
-
-  getAllTransfer(){
-     this.httpClient.get('')
+  
+  async getAllTransfer(body: any) : Promise<any> {
+     this.httpClient.post('http://localhost:3000/transfer/createTransfer', body).subscribe((data : any) => {
+      console.log('DATAAAAAA' , data)
+     })
   }
 }

@@ -1,11 +1,11 @@
-<div calss="container">
+
+<div class="container">
   <div class="col-md-7">
     <div class="loginbox">
       <img src="https://i.imgur.com/ZYzTdD0.png" class="avatar" />
       <h1>Login Here</h1>
       <div class="space"></div>
-      <form id="formularioLogin" 
-      [formGroup]="frmFormularyLogin">
+      <form id="formularioLogin"[formGroup]="frmFormularyLogin" (ngSubmit)="onSubmit()">
         <div>
           <input
             type="text"
@@ -20,7 +20,7 @@
         <div class="space"></div>
         <div>
           <input
-            type="text"
+            type="password"
             placeholder="Enter password"
             formControlName="password"
             name="password" />
@@ -35,7 +35,9 @@
         </div>
         <div class="space"></div>
         <div class="row d-flex justify-content-center">
-          <button (click)="sendDataFormulary()" [disabled]="frmFormularyLogin.invalid" class = "btn btnLogin">Login</button>
+          <button type="submit" (click)="sendDataFormulary()" [disabled]="frmFormularyLogin.invalid" class = "btn btnLogin">Login</button>
+          <div class="space"></div>
+          <button (click)="goToRegister()"  class = "btn btnLogin">Register</button>
         </div>
         <div class="space"></div>
         <div>
@@ -43,7 +45,7 @@
         </div>
         <div class="space"></div>
         <a href="forgot">Lost your password?</a><br />
-        <a href="register">Don't have an account?</a>
+       <!-- <a href="register">Don't have an account?</a>-->
       </form>
     </div>
     <div></div>

@@ -1,6 +1,5 @@
 export class UserModel {
 
-  
   fullName: string;
   document: string;
   documentType: string;
@@ -20,6 +19,7 @@ export class UserModel {
 
   getData(): {
     fullName: string;
+    documentType:string;
     document: string;
     email: string;
     phone: string;
@@ -27,6 +27,7 @@ export class UserModel {
   return({
     fullName: this.fullName,
     document: this.document,
+    documentType: this.documentType,
     email: this.email,
     phone: this.phone,
     password: this.password,

@@ -3,6 +3,8 @@ import { UserModel } from "../../models/new-user.model";
 import { UsersService } from "../../services/users/users.service";
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { environment } from '../../../../../environments/environment.prod';
+import {Location} from '@angular/common';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,7 +26,11 @@ export class RegisterComponent {
 */
   frmFormularyRegister: FormGroup;
   
-  constructor(private readonly usersService: UsersService){
+  constructor(private readonly usersService: UsersService,
+    private _location: Location,
+    private router: Router
+
+    ){
     this.routeUser = ['user'];
     this.routeForgot= ['forgot'];
 
@@ -40,10 +46,12 @@ export class RegisterComponent {
   }
   sendData(): void{
     this.usersService.createUser(this.frmFormularyRegister.getRawValue()).subscribe({
-      next: (data) =>console.log(data),
+      next: (data) => {
+        this._location.back();
+        console.log(data)
+      },
       error: err => console.error(err),
-      complete: () => console.log('complete')
-
+      complete: () =>  this.router.navigate([''])
     })
   }
 

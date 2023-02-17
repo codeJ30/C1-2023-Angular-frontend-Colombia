@@ -1,4 +1,3 @@
-<router-outlet></router-outlet>
 
 <div class="wrapper">
   <form id="frmFormularyRegister" [formGroup]="frmFormularyRegister">
@@ -35,9 +34,12 @@
         Document Type Required
         <span class="fas fa-doc"></span>
       </div>
-      <input class="form-control" autocomplete="off" type="documentType"
-        placeholder="DocumentType"
-        formControlName="documentType" name="documentType">
+ 
+       <select class="form-control" formControlName="documentType" name="documentType">
+          <option selected > Seleccion una opcion</option>
+          <option value="CC" selected > Cedula Cuidadania</option>
+          <option value="CE">Cedula Extranjeria</option>
+        </select>
     </div>
 
     <div class="form-group-1">
@@ -84,7 +86,7 @@
       </label>
     </div>
 
-    <button type="reset" (click)="sendData()" [formGroup]="frmFormularyRegister"
+    <button type="reset" (click)="sendData()" [formGroup]="frmFormularyRegister" 
       class="btn btn-primary mb-3">
       Signup
     </button>

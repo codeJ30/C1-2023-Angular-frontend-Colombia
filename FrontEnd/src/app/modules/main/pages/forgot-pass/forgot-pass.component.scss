@@ -1,9 +1,6 @@
 /* Login v4 */
 
-.signup_v4 .social-area {
-    text-align: center;
-    padding-top: 14px;
-  }
+
   
   .signup_v4 .social-area .title {
     font-size: 20px;
@@ -46,35 +43,6 @@
     transform: translateY(-50%);
     right: 100%;
     margin-right: 7px;
-  }
-  
-  .signup_v4 ul.social-links {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .signup_v4 .social-area .social-links li {
-    display: inline-block;
-  }
-  
-  .signup_v4 .social-area .social-links li a i {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    line-height: 50px;
-    display: inline-block;
-    color: #fff;
-    margin: 0 5px;
-    -webkit-box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
-    box-shadow: 0 5px 10px rgb(0 0 0 / 15%);
-  }
-  
-  .signup_v4 .social-area .social-links li a i.fa-facebook-f {
-    background: #0069f7;
-  }
-  
-  .signup_v4 .social-area .social-links li a i.fa-google-plus-g {
-    background: #d1062c;
   }
   
   .signup_v4 .nav-tabs .nav-link.active {

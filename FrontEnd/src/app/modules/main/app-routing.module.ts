@@ -14,8 +14,8 @@ import {
   AngularFireAuthGuard
 } from '@angular/fire/compat/auth-guard'
 
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
-const redirectLoggedInToUser = () => redirectLoggedInTo(['user'])
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
+const redirectLoggedInToUser = () => redirectLoggedInTo([''])
 const routes: Routes = [
   {
     path: '',
@@ -23,18 +23,19 @@ const routes: Routes = [
     canActivate: [AngularFireAuthGuard],
     data:{authGuardPipe: redirectLoggedInToUser}
   },
+
   {
-    path: 'account',
-    component: AccountComponent
+  path: 'account',
+  component: AccountComponent
   },
   {path: 'register',
-   component: RegisterComponent 
+    component: RegisterComponent 
   },
   {
    path: 'user',
    component: UserComponent,
-   canActivate: [AngularFireAuthGuard],
-   data: {authGuardPipe: redirectUnauthorizedToLogin}
+   //canActivate: [AngularFireAuthGuard],
+   //data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
   {
     path: 'deposit',
