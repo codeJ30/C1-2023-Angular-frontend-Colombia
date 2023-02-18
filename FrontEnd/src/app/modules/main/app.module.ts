@@ -16,6 +16,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../../../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { IdPipePipe } from './pipes/id-pipe.pipe';
+import { ObtenerDepositComponent } from './pages/obtener-deposit/obtener-deposit.component';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { IdPipePipe } from './pipes/id-pipe.pipe';
     AccountComponent, 
     TransferComponent, 
     ForgotPassComponent, 
-    IdPipePipe,
+    IdPipePipe, ObtenerDepositComponent,
      ],
 
   imports: [

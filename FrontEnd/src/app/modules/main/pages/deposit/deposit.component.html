@@ -1,95 +1,25 @@
 
-<div class="container rounded mt-5 bg-white p-md-5">
-  <div class="h2 font-weight-bold">DEPOSITS</div>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">ID Deposit</th>
-          <th scope="col">Mount</th>
-          <th scope="col">Account</th>
-          <th scope="col">Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="bg-blue">
-          <td class="pt-2">
-            <img
-              src="https://thumbs.dreamstime.com/z/icono-del-vector-cashback-en-plano-s%C3%ADmbolo-de-dinero-devuelto-estilo-signo-devoluci%C3%B3n-efectivo-simple-aislado-fondo-blanco-237134494.jpg"
-              class="rounded-circle"
-              alt="" />
-            <div class="pl-lg-5 pl-md-3 pl-1 name"><div id="Id">#Id</div></div>
-          </td>
-          <td class="pt-3 mt-1">$$$$$$$$</td>
-          <td class="pt-3">Account Number</td>
-          <td class="pt-3">AAAA/MM/DD</td>
-          <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-        </tr>
-        <tr id="spacing-row">
-          <td></td>
-        </tr>
-        <tr class="bg-blue">
-          <td class="pt-2">
-            <img
-              src="https://thumbs.dreamstime.com/z/icono-del-vector-cashback-en-plano-s%C3%ADmbolo-de-dinero-devuelto-estilo-signo-devoluci%C3%B3n-efectivo-simple-aislado-fondo-blanco-237134494.jpg"
-              class="rounded-circle"
-              alt="" />
-            <div class="pl-lg-5 pl-md-3 pl-1 name"><div id="Id">#Id</div></div>
-          </td>
-          <td class="pt-3 mt-1">$$$$$$$$</td>
-          <td class="pt-3">Account Number</td>
-          <td class="pt-3">AAAA/MM/DD</td>
-          <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-        </tr>
-        <tr id="spacing-row">
-          <td></td>
-        </tr>
-        <tr class="bg-blue">
-          <td class="pt-2">
-            <img
-              src="https://thumbs.dreamstime.com/z/icono-del-vector-cashback-en-plano-s%C3%ADmbolo-de-dinero-devuelto-estilo-signo-devoluci%C3%B3n-efectivo-simple-aislado-fondo-blanco-237134494.jpg"
-              class="rounded-circle"
-              alt="" />
-            <div class="pl-lg-5 pl-md-3 pl-1 name"><div id="Id">#Id</div></div>
-          </td>
-          <td class="pt-3 mt-1">$$$$$$$$</td>
-          <td class="pt-3">Account Number</td>
-          <td class="pt-3">AAAA/MM/DD</td>
-          <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-        </tr>
-        <tr id="spacing-row">
-          <td></td>
-        </tr>
-        <tr class="bg-blue">
-          <td class="pt-2">
-            <img
-              src="https://thumbs.dreamstime.com/z/icono-del-vector-cashback-en-plano-s%C3%ADmbolo-de-dinero-devuelto-estilo-signo-devoluci%C3%B3n-efectivo-simple-aislado-fondo-blanco-237134494.jpg"
-              class="rounded-circle"
-              alt="" />
-            <div class="pl-lg-5 pl-md-3 pl-1 name"><div id="Id">#Id</div></div>
-          </td>
-          <td class="pt-3 mt-1">$$$$$$$$</td>
-          <td class="pt-3">Account Number</td>
-          <td class="pt-3">AAAA/MM/DD</td>
-          <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-        </tr>
-        <tr id="spacing-row">
-          <td></td>
-        </tr>
-        <tr class="bg-blue">
-          <td class="pt-2">
-            <img
-              src="https://thumbs.dreamstime.com/z/icono-del-vector-cashback-en-plano-s%C3%ADmbolo-de-dinero-devuelto-estilo-signo-devoluci%C3%B3n-efectivo-simple-aislado-fondo-blanco-237134494.jpg"
-              class="rounded-circle"
-              alt="" />
-            <div class="pl-lg-5 pl-md-3 pl-1 name"><div id="Id">#Id</div></div>
-          </td>
-          <td class="pt-3 mt-1">$$$$$$$$</td>
-          <td class="pt-3">Account Number</td>
-          <td class="pt-3">AAAA/MM/DD</td>
-          <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-        </tr>
-      </tbody>
-    </table>
+
+
+<div>
+ 
+  <div class="container">
+    
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="space"></div>
+      <div class="placeholder">
+        <input class="input" formControlName="account"  placeholder="account">
+      </div>
+      <div class="space"></div>
+      <div class="input1">
+        <input formControlName="amount" placeholder="amount">
+      </div>
+      <div class="space"></div>
+      <div>
+        <button class="submit">Submit</button>
+      </div>
+      <div class="space"></div>
+    </form>
+  
   </div>
-</div>
+  </div>

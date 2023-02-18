@@ -7,6 +7,7 @@ import { DepositComponent } from './pages/deposit/deposit.component';
 import { TransferComponent } from './pages/transfer/transfer.component';
 import { AccountComponent } from './pages/account/account.component';
 import { ForgotPassComponent } from './pages/forgot-pass/forgot-pass.component';
+import { ObtenerDepositComponent } from './pages/obtener-deposit/obtener-deposit.component';
 
 import {
   redirectUnauthorizedTo,
@@ -26,25 +27,38 @@ const routes: Routes = [
 
   {
   path: 'account',
-  component: AccountComponent
+  component: AccountComponent,
+  canActivate: [AngularFireAuthGuard],
+  data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
   {path: 'register',
-    component: RegisterComponent 
+    component: RegisterComponent
   },
   {
    path: 'user',
    component: UserComponent,
-   //canActivate: [AngularFireAuthGuard],
-   //data: {authGuardPipe: redirectUnauthorizedToLogin}
+   canActivate: [AngularFireAuthGuard],
+   data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
   {
     path: 'deposit',
-    component: DepositComponent
+    component: ObtenerDepositComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
   {
     path: 'transfer',
-    component: TransferComponent
+    component: TransferComponent,
+    canActivate: [AngularFireAuthGuard],
+    data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
+  {
+    path: 'deposit/newDeposit',
+    component: DepositComponent ,
+    canActivate: [AngularFireAuthGuard],
+    data: {authGuardPipe: redirectUnauthorizedToLogin}
+  },
+
   {
     path: 'forgot',
     component: ForgotPassComponent
