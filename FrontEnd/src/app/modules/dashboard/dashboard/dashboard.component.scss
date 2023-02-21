@@ -1,0 +1,174 @@
+*
+
+body {
+  background-color: #73bce2
+}
+
+.card1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #6b7eb7;
+  //border: none
+}
+//fondo principal
+.card2 {
+  height: 100vh;
+  width: 100%;
+  background-color: #73bce2;
+  //border: none
+}
+// title span
+.image span {
+  color: #000000;
+  font-size: 30px
+}
+
+.hline {
+  color: #000000dc
+}
+
+.btn {
+  height: 40px;
+  width: 100%;
+  border: none;
+  position: relative;
+  border-radius: 8px
+}
+
+
+
+//letras span
+.btn span {
+  position: absolute;
+  right: 8px;
+  color: #000000;
+  font-weight: 400;
+  font-size: 20px;
+  top: 10px
+}
+
+.btn:hover {
+  background-color: #1967c6
+}
+
+// nombre usuario
+.hello span {
+  font-size: 25px;
+  font-weight: bold;
+  color: #3c3f61;
+  right: 40px
+}
+
+.shape {
+  background-color: #fff
+}
+  //card pequeñas
+.cardchild {
+  height: 130px;
+  width: 250px;
+  border: none;
+  position: relative;
+  border-radius: 10px;
+  background-color: rgb(195, 191, 191);
+}
+
+.type {
+  font-weight: 500
+}
+// numeros
+.number {
+  font-size: 25px;
+  color: #4f5366
+}
+
+.cardchild .logo3 {
+  position: absolute;
+  top: 20px;
+  color: #2d5fc3;
+  right: 20px
+}
+//porcentaje card 3
+.cardchild .percentage3 {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  color: red;
+  font-weight: 500
+}
+//logo card 4
+.cardchild .logo4 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: red;
+}
+// porcentaje card 4
+.cardchild .percentage4 {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  color: #2d5fc3;
+  font-weight: 500
+}
+
+.cardchildchild {
+  width: 500px;
+  position: relative;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+//targeta principal
+.cardchildchild {
+  background-color: #557cca;
+}
+
+.cardchildchild .profile1 {
+  position: absolute;
+  border-radius: 50%;
+  top: -45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 120px
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 500
+}
+//text tarjeta
+.braceletid {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+.btn1 {
+  height: 35px;
+  width: 120px;
+  border: none;
+  background-color: rgb(195, 191, 191);
+  cursor: pointer;
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 10px
+}
+
+.btn1:hover {
+  background-color: #df400f
+}
+
+.icons {
+  font-size: 20px;
+  font-weight: 500
+}
+
+.dummytext {
+  font-size: 18px;
+  font-weight: normal;
+  color: #ffffff
+}
+
