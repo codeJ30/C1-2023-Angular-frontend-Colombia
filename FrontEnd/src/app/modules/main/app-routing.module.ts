@@ -31,50 +31,40 @@ const routes: Routes = [
   {
     path:'dashboard',
     component: DashboardComponent,
-    //canActivate: [AngularFireAuthGuard],
-    //data:{authGuardPipe:redirectUnauthorizedToLogin}
   },
 
   {
     path: '',
     component: LoginComponent,
-    canActivate: [AngularFireAuthGuard],
-    data:{authGuardPipe: redirectUnauthorizedToLogin}
   },
 
   {
   path: 'account',
   component: AccountComponent,
-  canActivate: [AngularFireAuthGuard],
-  data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
 
   {path: 'register',
     component: RegisterComponent,
   },
+
   {
    path: 'user',
    component: UserComponent,
-   canActivate: [AngularFireAuthGuard],
-   data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
+
   {
     path: 'deposit',
-    component: ObtenerDepositComponent,
-    canActivate: [AngularFireAuthGuard],
-    data: {authGuardPipe: redirectUnauthorizedToLogin}
+    component: ObtenerDepositComponent,  
   },
+
   {
     path: 'transfer',
     component: TransferComponent,
-    canActivate: [AngularFireAuthGuard],
-    data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
+
   {
     path: 'deposit/newDeposit',
-    component: DepositComponent ,
-    canActivate: [AngularFireAuthGuard],
-    data: {authGuardPipe: redirectUnauthorizedToLogin}
+    component: DepositComponent , 
   },
 
   {

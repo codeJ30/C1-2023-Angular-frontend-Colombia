@@ -15,14 +15,7 @@ import Swal from 'sweetalert2';
 export class RegisterComponent {
   routeUser: string[];
   routeForgot: string[];
-  /*
-  fullName: string;
-  document: string;
-  documentType: string;
-  email: string;
-  phone: string;
-  password: string;
-*/
+
   frmFormularyRegister: FormGroup;
 
   constructor(
@@ -52,10 +45,7 @@ export class RegisterComponent {
   }
 
   register(): void {
-    //const name = this.frmFormularyRegister.value.fullName;
-    //const document = this.frmFormularyRegister.value.document;
-    //const typeDoc = this.frmFormularyRegister.value.documentType;
-    //const phone = this.frmFormularyRegister.value.phone;
+  
     const email = this.frmFormularyRegister.value.email;
     const pass = this.frmFormularyRegister.value.password;
 
@@ -68,11 +58,28 @@ export class RegisterComponent {
         this.usersService
           .createUser(this.frmFormularyRegister.getRawValue())
           .subscribe({
-            next: data => {
+            next: data =>   {
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Register Successfull',
+                showConfirmButton: false,
+                timer: 1500,
+              }),
               this._location.back();
-              console.log(data), this.router.navigate(['/login']);
+              console.log(data), this.router.navigate(['/login'])
             },
-            error: err => console.error(err),
+
+              //this._location.back();
+              //console.log(data), this.router.navigate(['/login']);
+            //},
+            error: err =>    Swal.fire({
+              position: 'top-end',
+              icon: 'error',
+              title: 'Incorrect Data ',
+              showConfirmButton: false,
+              timer: 1500,
+            }),
             complete: () => {
          
               this.router.navigate([]);

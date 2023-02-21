@@ -62,7 +62,7 @@ frmFormularyForgotPass: FormGroup;
         Swal.fire({
           position: 'top-end',
           icon: 'error',
-          title: 'Datos incorrectos ',
+          title: 'Incorrect Data ',
           showConfirmButton: false,
           timer: 1500,
         });
@@ -71,7 +71,7 @@ frmFormularyForgotPass: FormGroup;
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: 'Inicio de ',
+          title: 'Login Sussesfull',
           showConfirmButton: false,
           timer: 1500,
         });
