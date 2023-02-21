@@ -1,0 +1,62 @@
+<div class="wrapper">
+  <div class="col-md-7">
+    <div class="loginbox">
+      <img
+        src="https://t3.ftcdn.net/jpg/05/44/77/06/240_F_544770685_iDH4RZDkRmsksWt3MFG2e9oGqubKl2Mo.jpg"
+        class="avatar" />
+      <h1 class="login">Login Here</h1>
+      <div class="space"></div>
+      <form
+        id="formularioLogin"
+        [formGroup]="frmFormularyLogin">
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"  
+            placeholder="Enter Name or Username"
+              formControlName="userName"
+              name="userName"        
+            placeholder="userName" />
+            <div class= "mjs" *ngIf="frmFormularyLogin.get('userName')?.hasError('required') &&
+              frmFormularyLogin.get('userName')?.touched ">
+                Required field
+              </div>
+
+          <label for="floatingInput">Email</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="password" 
+            class="form-control"  
+            placeholder="Enter password"
+            formControlName="password"
+            name="password"/>
+            <div class= "mjs mb-3" *ngIf="frmFormularyLogin.get('password')?.hasError('required') &&
+            frmFormularyLogin.get('password')?.touched">
+              Required field
+            </div>
+            <div class="invalidPass" *ngIf="frmFormularyLogin.get('password')?.hasError('pattern')">
+             Invalid Password
+            </div>
+          <label >Password</label>
+        </div>
+        <div class="row d-flex justify-content-center">
+
+          <div class="d-grid gap-2">
+            <button class="btn btnLogin btn-lg mb-3" type="submit" (click)="onSubmit()"
+            [disabled]="frmFormularyLogin.invalid"
+             >Login</button>
+          </div>
+        </div>
+        <div>
+          <button type="reset" (click)="auth()" class="btn btnLogin mb-3">Google</button>
+        </div>
+        <p class="mt-3">Don't have an account? <a routerLink="/register">Register</a></p>
+        <a class="mt-3" routerLink="/forgot">Lost your password?</a> 
+      </form>
+    </div>
+    <div></div>
+    <div></div>
+  </div>
+</div>

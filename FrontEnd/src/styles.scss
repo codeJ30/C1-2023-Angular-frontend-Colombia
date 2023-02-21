@@ -1,12 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
 .header {
   background-color: #333333;
+
 }
 
 .footer {
   background-color: #333333;
 }
 
-.body {
-  height: 700px;
+html , body {
+  height: 100px;
 }
+
+.wrapper{
+  background-color: #f5f5f5;
+}
+
+.login{
+  font-size: 40px;
+  font-style: normal;
+  font-family: Tahoma;
+}
+
+  
+  .loginbox {
+    display: flexbox;
+    width: 380px;
+    height: 430px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 12 0px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    color: #000000;
+  }
+  
+  h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 24px
+  }
+  
+  .loginbox p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold
+  }
+  
+  .loginbox input {
+    width: 100%;
+    margin-bottom: 20px
+  }
+  
+  .loginbox input[type="email"],
+  input[type="password"] {
+    border: none;
+    border-bottom: 2px solid rgb(135, 209, 209);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #050505;
+    font-size: 16px
+  }
+  
+  .btnLogin{
+    background-color: rgb(135, 209, 209);
+    margin-left: 45px;
+    margin-right: 45px ;
+    width: 70%;
+    border: #000000;
+  }
+  
+  .mjs{
+     color: #f02b2b;
+     border-radius: 4px;
+     margin-right: 40%;
+     text-decoration: underline;
+     
+  }
+  
+  
+
+
+

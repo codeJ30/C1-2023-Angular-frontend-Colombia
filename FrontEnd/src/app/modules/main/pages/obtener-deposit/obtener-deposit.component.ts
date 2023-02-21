@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IDeposit } from '../../interfaces/deposit.interface';
-import { AuthService } from '../../services/auth/auth.service';
+import { AuthService } from '../../../auth/services/auth/auth.service';
 import { ObtenerDepositService } from '../../services/getDeposit/obtener-deposit.service';
 
 @Component({

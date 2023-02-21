@@ -1,28 +1,45 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from './pages/index/index.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { UserComponent } from './pages/user/user.component';
+import { DashboardComponent } from '../dashboard/dashboard/dashboard.component';
 import { DepositComponent } from './pages/deposit/deposit.component';
 import { TransferComponent } from './pages/transfer/transfer.component';
 import { AccountComponent } from './pages/account/account.component';
 import { ForgotPassComponent } from './pages/forgot-pass/forgot-pass.component';
 import { ObtenerDepositComponent } from './pages/obtener-deposit/obtener-deposit.component';
-
+import { LoginComponent } from '../auth/pages/login/login.component';
+import { UserComponent } from './pages/user/user.component';
 import {
   redirectUnauthorizedTo,
   redirectLoggedInTo,
   AngularFireAuthGuard
 } from '@angular/fire/compat/auth-guard'
 
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
-const redirectLoggedInToUser = () => redirectLoggedInTo([''])
+
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectLoggedInToDashboard = () => redirectLoggedInTo(['dashboard'])
 const routes: Routes = [
+
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [AngularFireAuthGuard],
+    data:{authGuardPipe: redirectLoggedInToDashboard}
+  },
+
+  {
+    path:'dashboard',
+    component: DashboardComponent,
+    //canActivate: [AngularFireAuthGuard],
+    //data:{authGuardPipe:redirectUnauthorizedToLogin}
+  },
+
   {
     path: '',
-    component: IndexComponent,
+    component: LoginComponent,
     canActivate: [AngularFireAuthGuard],
-    data:{authGuardPipe: redirectLoggedInToUser}
+    data:{authGuardPipe: redirectUnauthorizedToLogin}
   },
 
   {
@@ -31,8 +48,9 @@ const routes: Routes = [
   canActivate: [AngularFireAuthGuard],
   data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
+
   {path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
   },
   {
    path: 'user',
@@ -63,8 +81,6 @@ const routes: Routes = [
     path: 'forgot',
     component: ForgotPassComponent
   }
-
-
 ];
 
 @NgModule({

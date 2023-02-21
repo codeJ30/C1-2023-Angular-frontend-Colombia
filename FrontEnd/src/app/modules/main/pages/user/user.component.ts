@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users/users.service';
 import { IUsers } from '../../interfaces/users.interface';
-import { AuthService } from '../../services/auth/auth.service';
+import { AuthService } from '../../../auth/services/auth/auth.service';
 
 @Component({
   selector: 'sofka-user',
