@@ -65,14 +65,9 @@ export class RegisterComponent {
                 title: 'Register Successfull',
                 showConfirmButton: false,
                 timer: 1500,
-              }),
-              this._location.back();
-              console.log(data), this.router.navigate(['/login'])
+              })
             },
 
-              //this._location.back();
-              //console.log(data), this.router.navigate(['/login']);
-            //},
             error: err =>    Swal.fire({
               position: 'top-end',
               icon: 'error',
@@ -81,8 +76,15 @@ export class RegisterComponent {
               timer: 1500,
             }),
             complete: () => {
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Register Successfull',
+                showConfirmButton: false,
+                timer: 1500,
+              }),
          
-              this.router.navigate([]);
+              this.router.navigate(['/login']);
             },
           });
       })

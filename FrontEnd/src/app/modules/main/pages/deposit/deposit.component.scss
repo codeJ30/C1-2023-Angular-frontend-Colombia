@@ -1,0 +1,32 @@
+
+
+
+.container{
+    padding-left:13.5em;
+    background: rgb(139, 182, 193);
+    width: 30%;
+    border-radius: 10px;
+   
+   }
+   
+   ::placeholder{
+       width: min-content;
+       padding-left: 30%;
+       color: black;
+       font-size: 18px;
+   
+   }
+   .space{
+       height: 50px;
+   }
+   
+   .submit{
+       background-color: rgb(58, 103, 154);
+       margin-right: 50px ;
+       width: 70%;
+       border-radius: 10px;
+       border: #000000;
+       font-family: cursive;
+       font-size: 26px;
+       
+   }

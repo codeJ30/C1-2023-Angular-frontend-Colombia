@@ -4,6 +4,8 @@ import { UsersService } from '../../main/services/users/users.service';
 import { Router } from '@angular/router';
 import {IUserAccountInterface} from '../../auth/interfaces/userAccount.interface'
 import Swal from 'sweetalert2';
+import { IAccountInterface } from '../../main/interfaces/account.interface';
+import { AccountService } from '../../main/services/account/account.service';
   
 @Component({
   selector: 'sofka-dashboard',
@@ -12,42 +14,37 @@ import Swal from 'sweetalert2';
 })
 export class DashboardComponent {
 
-  userAccounts: IUserAccountInterface[];
+  userAccounts: IAccountInterface[];
 
   constructor(
     private readonly authService: AuthService,
-    private readonly userService: UsersService,
+    private readonly accountService: AccountService,
     private readonly router: Router
     ){
 
-      this.userAccounts = new Array <IUserAccountInterface>();
+      this.userAccounts = new Array <IAccountInterface>();
     }
 
     ngOnInit():void {
        const savedData = localStorage.getItem('id')as string;
        console.log(localStorage.getItem('TOKEEENNNN'))
 
-       this.userService.getAccountUser(savedData).subscribe({
+       this.accountService.getAll(savedData).subscribe({
         next: data => {
           console.log(data);
           this.userAccounts = data;
         },
         error: err => console.log(err),
-        complete: () => {
-          Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Login Sussesfull',
-            showConfirmButton: false,
-            timer: 1500,
-          });
-          this.router.navigate(['/dashboard']);
-        }
+      
        });
     }
 
-    redirect(){
-      this.router.navigate(['user']);
+    redirectTransfer(){
+      return this.router.navigate(['transfer']);
+    }
+
+    redirectDeposit(){
+      return this.router.navigate(['deposit/newDeposit']);
     }
 
   logout(): void{

@@ -12,7 +12,7 @@ body {
 }
 //fondo principal
 .card2 {
-  height: 100vh;
+  height: max-content;
   width: 100%;
   background-color: #73bce2;
   //border: none
@@ -20,7 +20,7 @@ body {
 // title span
 .image span {
   color: #000000;
-  font-size: 30px
+  font-size: 30px;
 }
 
 .hline {
@@ -48,7 +48,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #1967c6
+  background-color: #f9fafa
 }
 
 // nombre usuario
@@ -95,13 +95,7 @@ body {
   color: red;
   font-weight: 500
 }
-//logo card 4
-.cardchild .logo4 {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: red;
-}
+
 // porcentaje card 4
 .cardchild .percentage4 {
   position: absolute;

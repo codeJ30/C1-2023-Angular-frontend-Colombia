@@ -56,7 +56,7 @@ frmFormularyForgotPass: FormGroup;
       next: (data) => {
         console.log (data.access_token)
         localStorage.setItem('token',data.access_token );
-        this.router.navigate(['/dashboard']);
+        localStorage.setItem('id',data.id );
       },
       error: err => {
         Swal.fire({
