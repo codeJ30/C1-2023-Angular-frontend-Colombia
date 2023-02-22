@@ -42,19 +42,18 @@
         </div>
         <div class="form-group-1">
           <div class="icon"
-            *ngIf="frmFormularyRegister.get('documentType')?.hasError('required') &&
-            frmFormularyRegister.get('documentType')?.touched">
+            *ngIf="frmFormularyRegister.get('documentTypeId')?.hasError('required') &&
+            frmFormularyRegister.get('documentTypeId')?.touched">
             Document Type Required
             <span class="fas fa-doc"></span>
           </div>
-           <select class="form-control mb-3" formControlName="documentType" name="documentType">
+           <select class="form-control mb-3" formControlName="documentTypeId" name="documentTypeId">
             <label for="floatingInput">Document Type</label>
               <option selected class="Text" placeholder="Select Option"></option>
-              <option value="CC" selected > Cedula Cuidadania</option>
-              <option value="CE">Cedula Extranjeria</option>
+              <option value="73ddaeb0-6dc5-4e62-b2be-8dfe39027546" selected > Cedula Cuidadania</option>
+              <option value="0bfa4f87-392f-44b1-9517-b0da30cbf18b">Cedula Extranjeria</option>
             </select>
           </div>
-        
         
           <div class="form-floating mb-3">
             <input  

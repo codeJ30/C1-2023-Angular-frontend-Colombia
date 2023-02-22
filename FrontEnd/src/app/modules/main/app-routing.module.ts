@@ -17,8 +17,8 @@ import {
 
 
 
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
-const redirectLoggedInToDashboard = () => redirectLoggedInTo(['dashboard'])
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['/login']);
+const redirectLoggedInToDashboard = () => redirectLoggedInTo(['/dashboard'])
 const routes: Routes = [
 
   {

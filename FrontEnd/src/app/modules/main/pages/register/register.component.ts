@@ -30,7 +30,7 @@ export class RegisterComponent {
     this.frmFormularyRegister = new FormGroup({
       fullName: new FormControl('', [Validators.required]),
       document: new FormControl('', [Validators.required]),
-      documentType: new FormControl('', [Validators.required]),
+      documentTypeId: new FormControl('', [Validators.required]),
       email: new FormControl('', [
         Validators.required,
         Validators.pattern(environment.regexEmail),
