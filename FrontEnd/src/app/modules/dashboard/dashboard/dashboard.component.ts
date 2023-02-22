@@ -3,7 +3,8 @@ import { AuthService } from '../../auth/services/auth/auth.service';
 import { UsersService } from '../../main/services/users/users.service';
 import { Router } from '@angular/router';
 import {IUserAccountInterface} from '../../auth/interfaces/userAccount.interface'
-import Swal from 'sweetalert2';
+import  Swal  from 'sweetalert2';
+
   
 @Component({
   selector: 'sofka-dashboard',

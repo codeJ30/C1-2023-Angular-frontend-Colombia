@@ -59,6 +59,7 @@ frmFormularyForgotPass: FormGroup;
         this.router.navigate(['/dashboard']);
       },
       error: err => {
+        console.log (err),
         Swal.fire({
           position: 'top-end',
           icon: 'error',

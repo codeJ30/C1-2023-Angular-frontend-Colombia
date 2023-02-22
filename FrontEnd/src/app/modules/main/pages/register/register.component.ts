@@ -5,7 +5,6 @@ import { environment } from '../../../../../environments/environment.prod';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'sofka-register',
@@ -44,7 +43,7 @@ export class RegisterComponent {
     });
   }
 
-  register(): void {
+  register(){
   
     const email = this.frmFormularyRegister.value.email;
     const pass = this.frmFormularyRegister.value.password;
@@ -56,32 +55,15 @@ export class RegisterComponent {
         this.router.navigate(['/dashboard']);
 
         this.usersService
-          .createUser(this.frmFormularyRegister.getRawValue())
+          .createUser(this.frmFormularyRegister.get('user')?.getRawValue())
           .subscribe({
-            next: data =>   {
-              Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Register Successfull',
-                showConfirmButton: false,
-                timer: 1500,
-              }),
+            next: (data) =>{
+              console.log(data.access_token)
               this._location.back();
-              console.log(data), this.router.navigate(['/login'])
+              this.router.navigate(['/login'])
             },
-
-              //this._location.back();
-              //console.log(data), this.router.navigate(['/login']);
-            //},
-            error: err =>    Swal.fire({
-              position: 'top-end',
-              icon: 'error',
-              title: 'Incorrect Data ',
-              showConfirmButton: false,
-              timer: 1500,
-            }),
+            error: err =>  console.log(err),
             complete: () => {
-         
               this.router.navigate([]);
             },
           });

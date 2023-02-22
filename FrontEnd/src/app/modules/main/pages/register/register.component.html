@@ -24,9 +24,6 @@
           </div>
           <label for="floatingInput">FullName</label>
         </div>
-
-
-
         <div class="form-floating mb-3">
           <input  
           type="text" 
@@ -36,7 +33,7 @@
           name="document">
           <div class="mjs" *ngIf="frmFormularyRegister.get('document')?.hasError('required') &&
             frmFormularyRegister.get('fullName')?.touched">
-            Name is Required
+            Document is Required
           </div>
           <label for="floatingInput">Document</label>
         </div>
@@ -54,7 +51,6 @@
               <option value="CE">Cedula Extranjeria</option>
             </select>
           </div>
-        
         
           <div class="form-floating mb-3">
             <input  

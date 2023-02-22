@@ -27,7 +27,7 @@ export class UsersService {
     }
 
     getAccountUser(userAccount: string){
-      return this.httpClient.get<IUserAccountInterface[]>('http://localhost:3000//account/getAccount')
+      return this.httpClient.get<IUserAccountInterface[]>('http://localhost:3000/account/getAccount')
     }
 
     signIn(email: string , password:string):Observable<ISignIn>{
