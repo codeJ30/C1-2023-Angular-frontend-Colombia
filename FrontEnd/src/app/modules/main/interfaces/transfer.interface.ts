@@ -1,10 +1,11 @@
+import { IAccountInterface } from './account.interface';
 import { INewUser } from './new-user.interface';
 import { IUsers } from './users.interface';
 export interface ITransfer{
     id:string;
     amount: number;
-    inCome : IUsers;
-    outCome: IUsers;
+    income : IAccountInterface;
+    outcome: IAccountInterface;
     reason : string;
-    dateTime : number | Date;
+    date_time : number | Date;
 }

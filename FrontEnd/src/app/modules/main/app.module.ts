@@ -15,6 +15,7 @@ import { IdPipePipe } from './pipes/id-pipe.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { DepositHistoryComponent } from '../dashboard/components/deposit-history/deposit-history.component';
+import { TransferHistoryComponent } from '../dashboard/components/transfer-history/transfer-history.component';
 
 
 
@@ -36,7 +37,9 @@ import { DepositHistoryComponent } from '../dashboard/components/deposit-history
   declarations: [
     AppComponent, 
     UserComponent,
-    DepositHistoryComponent
+    DepositHistoryComponent,
+    TransferHistoryComponent
+
     ],
 
   providers: [],

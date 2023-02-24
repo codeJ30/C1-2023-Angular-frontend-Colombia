@@ -49,6 +49,11 @@ export class DashboardComponent {
       this.router.navigate(['dashboard/depositHistory']);
     }
 
+    verHistorialTranfer(id:string){
+      localStorage.setItem('idCuenta', id);
+      this.router.navigate(['dashboard/transferHistory']);
+    }
+
     redirectTransfer(){
       return this.router.navigate(['dashboard/transfer']);
     }

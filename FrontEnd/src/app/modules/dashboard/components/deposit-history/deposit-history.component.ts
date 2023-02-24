@@ -11,29 +11,26 @@ import { HistoryService } from '../../../main/services/transferHistory/history.s
 export class DepositHistoryComponent implements OnInit{
 
   depositHistory: IDepositInterface[];
-  
   idUser: string;
 
   constructor(private readonly historyService: HistoryService){
    
-   this.depositHistory= [];
+   this.depositHistory = [];
    this.idUser = ''; 
    }
   
   ngOnInit(): void {
    
-    this.idUser = localStorage.getItem('idCuenta')?? '';
+    this.idUser = localStorage.getItem('idCuenta') ?? '';
     this.historyService.getAllDeposit(this.idUser).subscribe({
         next: data => {
-          console.log('DATAAA', data)
-          this.depositHistory=data;
-          console.log(this.depositHistory)
+          this.depositHistory = data;
         },
         error: err => {
           console.log(err)
         },
         complete:() => {
-          console.log('DATAAAAA!!!' ,this.depositHistory[0])
+        
         }
     });
   }

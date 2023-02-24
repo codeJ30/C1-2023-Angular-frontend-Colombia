@@ -14,5 +14,9 @@
     "editor.formatOnSave": false
   },
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.inlineSuggest.enabled": true
+  "editor.inlineSuggest.enabled": true,
+  "zenMode.fullScreen": true,
+  "zenMode.centerLayout": true,
+  "zenMode.hideActivityBar": true,
+  "window.closeWhenEmpty": false
 }

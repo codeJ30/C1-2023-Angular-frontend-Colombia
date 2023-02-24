@@ -19,8 +19,8 @@
                 <tr *ngFor="let data of depositHistory">
                   <td>{{data.id}}</td>
                   <td>{{data.account.id}}</td>
-                  <td>{{data.dateTime}}</td>
-                  <td>{{data.amount}}</td>
+                  <td>{{data.dateTime | date : 'dd/MM/yyyy'}}</td>
+                  <td>{{data.amount | currency}}</td>
                 </tr>
               </tbody>
             </table>

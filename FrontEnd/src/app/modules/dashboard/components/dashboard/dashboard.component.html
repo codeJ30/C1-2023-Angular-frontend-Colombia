@@ -14,9 +14,6 @@
           <button class="btn mt-5"(click)="redirectDeposit()">
             <div class="fa fa-users"></div><span>Deposits</span>
           </button>
-          <button class="btn mt-5" (click)="redirectDepositHistory()">
-            <div class="fa fa-inbox"></div><span>Historial</span>
-          </button>
           <button class="btn mt-5" (click)="logout()">
             <div class="fa fa-book"></div><span>Salir</span>
           </button>
@@ -39,7 +36,7 @@
         <br>
         <button class="button" (click)="createAccount('c389bb0d-4e79-4e87-849f-3c3662cc59cf')">Crear Cuenta Corriente</button>
         <br>
-        <tr  *ngFor="let account of userAccounts" class="d-flex justify-content-center mt-4 gap-2 p-3">
+        <tr *ngFor="let account of userAccounts" class="d-flex justify-content-center mt-4 gap-2 p-3">
           <div class="col-md-6">
             <div class="card cardchildchild p-5">
               <div class="profile1">
@@ -61,7 +58,12 @@
               </div>
               <div
                 class="d-flex justify-content-center align-items-center mt-2" >
-                <button (click)="verHistorial(account.id)" class="btn1">Ver Historial</button>
+                <button (click)="verHistorial(account.id)" class="btn1">Get Deposit History</button>
+              </div>
+              <br>
+              <div
+                class="d-flex justify-content-center align-items-center mt-2" >
+                <button (click)="verHistorialTranfer(account.id)" class="btn1">Get Transfer History</button>
               </div>
             </div>
           </div>

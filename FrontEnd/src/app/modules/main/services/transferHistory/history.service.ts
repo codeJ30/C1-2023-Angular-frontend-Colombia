@@ -22,13 +22,13 @@ export class HistoryService{
       'http://localhost:3000/deposit/getHistory/' + id , body);
   }
 
-  getAllTransfer(id:string): Observable<ITransfer[]>{
+  getAllTransfer(id: string): Observable<ITransfer[]>{
   const body = {
-    dimension: 1,
+    actualPage:1,
     range : 10
 };
   return this.httpClient.post<ITransfer[]>(
-  'http://localhost:3000/transferHistory' + id, body);
+  'http://localhost:3000/transfer/getAllHistory/' + id, body);
 }
 
 }

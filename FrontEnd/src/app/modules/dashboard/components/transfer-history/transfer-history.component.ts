@@ -8,18 +8,31 @@ import { HistoryService } from '../../../main/services/transferHistory/history.s
   styleUrls: ['./transfer-history.component.scss']
 })
 export class TransferHistoryComponent implements OnInit{
+
   historyTransfer: ITransfer[];
-  arrayTransfer: object[];
   accountId: string;
 
 
   constructor(private readonly transferHistoryService: HistoryService){
-     this.arrayTransfer = [];
+    
      this.historyTransfer = [];
      this.accountId = "";
   }
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.accountId = localStorage.getItem('idCuenta') ?? '';
+    this.transferHistoryService.getAllTransfer(this.accountId).subscribe({
+       next: data => {
+        this.historyTransfer = data;
+        console.log(data)
+       },
+       error: err => {
+        console.log(err)
+       },
+       complete: () => {
+
+       }
+    })
   }
 
 }

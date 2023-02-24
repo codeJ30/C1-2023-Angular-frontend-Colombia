@@ -17,12 +17,12 @@
               </tr>
             </thead>
             <tbody class="customtable">
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+              <tr *ngFor="let data of historyTransfer">
+                <td>{{data.income.id}}</td>
+                <td>{{data.outcome.id}}</td>
+                <td>{{data.amount | currency}}</td>
+                <td>{{data.date_time | date : 'dd/MM/yyyy'}}</td>
+                <td>{{data.reason}}</td>
               </tr>
             </tbody>
           </table>
