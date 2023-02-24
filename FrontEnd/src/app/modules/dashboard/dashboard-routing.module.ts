@@ -35,6 +35,8 @@ const routes: Routes = [
   {
     path: 'account',
     component: AccountComponent,
+    canActivate: [redirecLoggedInToDashboard],
+    data: AngularFireAuthGuard, 
     
   },
 

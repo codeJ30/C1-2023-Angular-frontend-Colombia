@@ -8,6 +8,7 @@ import { AccountComponent } from './components/account/account.component';
 import { ObtenerDepositComponent } from './components/obtener-deposit/obtener-deposit.component';
 import { TransferComponent } from './components/transfer/transfer.component';
 import { IdPipePipe } from '../main/pipes/id-pipe.pipe';
+import { SaludoComponent } from './components/saludo/saludo.component';
 
 
 
@@ -18,7 +19,8 @@ import { IdPipePipe } from '../main/pipes/id-pipe.pipe';
     DashboardComponent,
     ObtenerDepositComponent,
     TransferComponent,
-    IdPipePipe
+    IdPipePipe,
+    SaludoComponent
   ],
   imports: [
     CommonModule,
