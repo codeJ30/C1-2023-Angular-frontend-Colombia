@@ -6,9 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TransferService {
 
-  constructor(private httpClient: HttpClient) { 
-     
-  }
+  constructor(private httpClient: HttpClient) {}
 
   
   async getAllTransfer(body: any) : Promise<any> {

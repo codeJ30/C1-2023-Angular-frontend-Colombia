@@ -4,21 +4,19 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './pages/app/app.component';
 import { UserComponent } from './pages/user/user.component';
-import { DepositComponent } from './pages/deposit/deposit.component';
-import { AccountComponent } from './pages/account/account.component';
-import { TransferComponent } from './pages/transfer/transfer.component';
-import { ForgotPassComponent } from './pages/forgot-pass/forgot-pass.component';
+import { AccountComponent } from '../dashboard/components/account/account.component';
+import { TransferComponent } from '../dashboard/components/transfer/transfer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../../../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { IdPipePipe } from './pipes/id-pipe.pipe';
-import { ObtenerDepositComponent } from './pages/obtener-deposit/obtener-deposit.component';
-import { LoginComponent } from '../auth/pages/login/login.component';
-import { DashboardComponent } from '../dashboard/dashboard/dashboard.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { RegisterComponent } from './pages/register/register.component';
+import { CommonModule } from '@angular/common';
+import { DepositHistoryComponent } from '../dashboard/components/deposit-history/deposit-history.component';
+
+
 
 
 @NgModule({
@@ -27,27 +25,19 @@ import { RegisterComponent } from './pages/register/register.component';
     BrowserModule, 
     AppRoutingModule, 
     SharedModule, 
-    FormsModule , 
-    HttpClientModule,
-    ReactiveFormsModule,
+    HttpClientModule, 
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     BrowserAnimationsModule,
-    
+    ReactiveFormsModule,
+    CommonModule,
   ],
 
   declarations: [
     AppComponent, 
-    RegisterComponent, 
-    UserComponent, 
-    DepositComponent, 
-    AccountComponent, 
-    TransferComponent, 
-    ForgotPassComponent, 
-    IdPipePipe, 
-    ObtenerDepositComponent, 
-    LoginComponent, 
-    DashboardComponent],
+    UserComponent,
+    DepositHistoryComponent
+    ],
 
   providers: [],
   

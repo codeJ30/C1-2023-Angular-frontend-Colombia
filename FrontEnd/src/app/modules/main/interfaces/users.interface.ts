@@ -1,10 +1,12 @@
 
 
 export interface IUsers {
-   id: string,
+   id: string;
    fullName: string,
    document : string,
-   documentType : {id: string},
+   documentType : {
+      id: string
+   },
    email : string,
    phone  : string,
    password : string,

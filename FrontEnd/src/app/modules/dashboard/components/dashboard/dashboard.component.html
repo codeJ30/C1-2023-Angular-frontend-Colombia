@@ -1,0 +1,73 @@
+<div>
+  <div class="d-flex flex-row">
+    <div class="col-md-3">
+      <div class="card card1 p-3">
+        <div class="image d-flex flex-row align-items-center mt-3">
+          <img src="https://png.pngtree.com/png-vector/20220611/ourlarge/pngtree-credit-money-bank-icon-png-image_4983498.png" height="50" width="50" />
+          <span>JP-Bank</span>
+        </div>
+        <hr class="hline" />
+        <div class="d-flex flex-column align-items-center">
+          <button class="btn mt-5" (click)="redirectTransfer()">
+            <div class="fa fa-dashboard" ></div><span>Transfer</span>
+          </button>
+          <button class="btn mt-5"(click)="redirectDeposit()">
+            <div class="fa fa-users"></div><span>Deposits</span>
+          </button>
+          <button class="btn mt-5" (click)="redirectDepositHistory()">
+            <div class="fa fa-inbox"></div><span>Historial</span>
+          </button>
+          <button class="btn mt-5" (click)="logout()">
+            <div class="fa fa-book"></div><span>Salir</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div  class="col-md-9">
+      <div class="card card2 p-3">
+        <div class="hello d-flex justify-content-end align-items-center mt-3" >
+          <span class= "userName">
+            {{name}}
+          </span>
+        </div>
+        <br>
+        <div class="align-items-center"></div>
+        <div class="d-flex flex-row gap-3">
+    
+        </div>
+        <button class="button" (click)="createAccount('18a639a4-38fd-4feb-b5f4-cb000a158d77')"> Crear Cuenta Ahorros</button>
+        <br>
+        <button class="button" (click)="createAccount('c389bb0d-4e79-4e87-849f-3c3662cc59cf')">Crear Cuenta Corriente</button>
+        <br>
+        <tr  *ngFor="let account of userAccounts" class="d-flex justify-content-center mt-4 gap-2 p-3">
+          <div class="col-md-6">
+            <div class="card cardchildchild p-5">
+              <div class="profile1">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE399MmVm1gpHSQWyQlqyqxO21jQmG2ymKww&usqp=CAU"
+                  height="90"
+                  width="90"
+                  class="rounded-circle" />
+              </div>
+              <br>
+              <div
+                class="d-flex flex-column justify-content-center align-items-center mt-2">
+                <span class="name">{{"Name : " + account.customer.fullName}}</span>
+                <span class="mt-2 braceletid">{{account.accountType.name}}</span>
+                <span class="mt-2 braceletid">{{account.id}}</span>
+                <span class="dummytext mt-2 p-3">
+                {{account.balance}}
+                </span>
+              </div>
+              <div
+                class="d-flex justify-content-center align-items-center mt-2" >
+                <button (click)="verHistorial(account.id)" class="btn1">Ver Historial</button>
+              </div>
+            </div>
+          </div>
+          </tr>
+        </div>
+      </div>
+    </div>
+  </div>
+

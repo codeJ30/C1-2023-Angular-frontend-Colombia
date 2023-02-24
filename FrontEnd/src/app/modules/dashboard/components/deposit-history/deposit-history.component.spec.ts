@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ForgotPassComponent as ForgotPassComponent } from './forgot-pass.component';
+import { DepositHistoryComponent } from './deposit-history.component';
 
-describe('FotgotPassComponent', () => {
-  let component: ForgotPassComponent;
-  let fixture: ComponentFixture<ForgotPassComponent>;
+describe('DepositHistoryComponent', () => {
+  let component: DepositHistoryComponent;
+  let fixture: ComponentFixture<DepositHistoryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForgotPassComponent ]
+      declarations: [ DepositHistoryComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ForgotPassComponent);
+    fixture = TestBed.createComponent(DepositHistoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

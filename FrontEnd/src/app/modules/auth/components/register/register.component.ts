@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UsersService } from '../../services/users/users.service';
+import { UsersService } from '../../../main/services/users/users.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { environment } from '../../../../../environments/environment.prod';
 import { Location } from '@angular/common';
@@ -52,22 +52,9 @@ export class RegisterComponent {
     this.afAuth
       .createUserWithEmailAndPassword(email, pass)
       .then(user => {
-        ('user logged in successfully');
-        this.router.navigate(['/dashboard']);
-
         this.usersService
           .createUser(this.frmFormularyRegister.getRawValue())
           .subscribe({
-            next: data =>   {
-              Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Register Successfull',
-                showConfirmButton: false,
-                timer: 1500,
-              })
-            },
-
             error: err =>    Swal.fire({
               position: 'top-end',
               icon: 'error',
@@ -84,7 +71,7 @@ export class RegisterComponent {
                 timer: 1500,
               }),
          
-              this.router.navigate(['/login']);
+              this.router.navigate(['auth/login']);
             },
           });
       })

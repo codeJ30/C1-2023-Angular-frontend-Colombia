@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-title m-b-0">DEPOSITS HISTORY</h5>
+          </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">IdDeposit</th>
+                  <th scope="col">account</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">amount</th>
+                </tr>
+              </thead>
+              <tbody class="customtable">
+                <tr *ngFor="let data of depositHistory">
+                  <td>{{data.id}}</td>
+                  <td>{{data.account.id}}</td>
+                  <td>{{data.dateTime}}</td>
+                  <td>{{data.amount}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ITranfersModel } from '../../models/transfer.model';
+import { ITranfersModel } from '../../../main/models/transfer.model';
 import { HttpClient } from '@angular/common/http';
-import { TransferService } from '../../services/transfer/transfer.service';
+import { TransferService } from '../../../main/services/transfer/transfer.service';
 
 @Component({
   selector: 'sofka-transfer',

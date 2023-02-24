@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IDeposit } from '../../interfaces/deposit.interface';
+import { IDeposit } from '../../../main/interfaces/deposit.interface';
 import { AuthService } from '../../../auth/services/auth/auth.service';
-import { ObtenerDepositService } from '../../services/getDeposit/obtener-deposit.service';
+import { ObtenerDepositService } from '../../../main/services/getDeposit/obtener-deposit.service';
 
 @Component({
   selector: 'sofka-obtener-deposit',

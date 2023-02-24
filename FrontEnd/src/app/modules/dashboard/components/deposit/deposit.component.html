@@ -1,25 +1,23 @@
 
-
-
 <div>
  
   <div class="container">
-    
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div>
       <div class="space"></div>
       <div class="placeholder">
-        <input class="input" formControlName="account"  placeholder="account">
+        <input class="text" [(ngModel)]="account"  placeholder="account">
       </div>
       <div class="space"></div>
       <div class="input1">
-        <input formControlName="amount" placeholder="amount">
+        <input type="text" [(ngModel)]="amount" placeholder="Amount"> 
       </div>
       <div class="space"></div>
       <div>
-        <button class="submit">Submit</button>
+        <button type="button" (click)="onSubmit()">Submit</button>
       </div>
       <div class="space"></div>
-    </form>
+    </div>
   
   </div>
   </div>
